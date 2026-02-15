@@ -5,10 +5,6 @@ This file contains information about the ZPLUS Water Softener website project.
 ## Project Overview
 This is a static website for ZPLUS Water Softener, a product that treats hard water. The website showcases the product's benefits, installation process, and features.
 
-## Content Source
-The content for the website is derived from `misc/ZPLUS TEXT.txt`.
-Images are located in the `misc/` folder.
-
 ## Menu Structure
 - **Home**: Introduction and Hero section.
 - **Product**: Explanation of how the product works and its benefits.
