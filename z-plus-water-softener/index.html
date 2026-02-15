@@ -89,10 +89,76 @@
             margin-right: 10px;
             font-weight: bold;
         }
+
+        .top-banner {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1031;
+        }
+        .top-banner a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .top-banner .social-icons {
+            text-align: right;
+        }
+        .top-banner .social-icons a {
+            margin-left: 10px;
+            margin-right: 0;
+            font-size: 16px;
+        }
+        .top-banner .contact-info {
+            display: flex;
+            align-items: center;
+        }
+        .top-banner .contact-info i {
+            margin-right: 5px;
+        }
+        @media (max-width: 768px) {
+            .top-banner .social-icons {
+                text-align: center;
+                margin-top: 5px;
+            }
+            .top-banner .contact-info {
+                justify-content: center;
+            }
+        }
+        .navbar-b.fixed-top {
+            top: 40px;
+        }
+        body {
+            padding-top: 40px;
+        }
     </style>
 </head>
 
 <body>
+
+<!-- Top Banner Start -->
+<div class="top-banner">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 contact-info">
+                <a href="tel:+918700463385"><i class="fa fa-phone"></i> Customer Care Number : +91 8700463385</a>
+            </div>
+            <div class="col-md-6 social-icons">
+                <a href="https://facebook.com" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                <a href="https://youtube.com" aria-label="Youtube"><i class="fa fa-youtube-play"></i></a>
+                <a href="https://instagram.com" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Top Banner End -->
 
 <!-- Loadnig Page Start -->
 <div class="loader-wrapper">
