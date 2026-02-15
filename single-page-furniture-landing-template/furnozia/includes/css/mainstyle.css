@@ -1,0 +1,349 @@
+/* ==========================
+
+    Project Name : furnozia 
+    Author Name : Lucid Themeslab
+    Store Link : https://www.templatemonster.com/store/lucid_themeslab/
+    Version : 1.0.0
+
+===============================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{    
+    --primefont: "Montserrat", sans-serif;
+    --secondfont:  "Libre Baskerville", serif;
+}
+
+[data-furnozia-theme="light"] {
+    --body-bg: #ffffff;
+    --head-bg: #f8f7f4;
+    --nav-bg: #ffffff;
+    --banner-bg: rgba(92, 152, 243, 0.12);
+    --prime-bg: #136053;  
+    --prime-alt-bg: #824925;        
+    --alt-bg: #E9DFD3;    
+    --alt-bg2: #FAF6EF;
+    --card-bg: #cce7e2;
+    --card-alt-bg: #e9eef926;
+    --white-bg: #ffffff;
+    --dark-bg: #000000;
+    --form-bg: #ffffff;
+    --input-bg: #d8d8da;
+    --icon-bg: #136053;
+    --footer-bg: #ffebdf;
+    --footer-copy-bg: #34383D;
+
+    --nav-text: #000000;
+    --white-text: #ffffff;
+    --prime-text: #136053;
+    --prime-alt-text: #824925;
+    --head-text: #0f172a;
+    --para-text: #494949;
+    --icon-text: #ffffff;
+    --dark-text: #020617;
+    --star-text: #facc15;
+    --head-alt-text: #1e293b;
+    --para-alt-text: #000000;
+    --input-text: #000000;
+    --footer-text: #2C2617;
+    --footer-copy-text: #ffffff;
+    --list-text: #136053;
+
+    --prime-btn: #136053;
+    --prime-btn2: #053a31;
+    --prime-btn-text: #ffffff;
+    --prime-btn-text2: #ffffff;
+    --prime-btn-border: #136053;
+    --prime-btn-border2: #053a31;
+
+    --second-btn: #824925;
+    --second-btn2: #502306;
+    --second-btn-text: #ffffff;
+    --second-btn-text2: #ffffff;
+    --second-btn-border: #824925;
+    --second-btn-border2: #502306;
+
+    --prime-border: #136053;
+    --light-border: #ebb598;
+    --main-border: #a7410a;
+}
+
+
+[data-furnozia-theme="dark"] {
+    --body-bg: #1b1b1b;
+    --head-bg: #120d01;
+    --nav-bg: #000000;
+    --banner-bg: rgba(92, 152, 243, 0.12);
+    --prime-bg: #136053;
+    --prime-alt-bg: #824925;
+    --alt-bg: #121212;
+    --alt-bg2: #0c0a0a;
+    --card-bg: #151515;
+    --card-alt-bg: #242c3d26;
+    --white-bg: #ffffff;
+    --dark-bg: #cecbcb;
+    --form-bg: #000000;
+    --input-bg: #101010;
+    --icon-bg: #136053;
+    --footer-bg: #120808;
+    --footer-copy-bg: #000000;
+
+    --nav-text: #ffffff;
+    --white-text: #ffffff;
+    --prime-text: #136053;
+    --prime-alt-text: #824925;
+    --head-text: #f8fafc;
+    --para-text: #f3f3f3;
+    --icon-text: #ffffff;
+    --dark-text: #020617;
+    --star-text: #facc15;
+    --head-alt-text: #d0d7ec;
+    --para-alt-text: #9ea0a3;
+    --input-text: #f8fafc;
+    --footer-text: #ffffff;
+    --footer-copy-text: #94a3b8;
+    --list-text: #136053;
+
+    --prime-btn: #136053;
+    --prime-btn2: #44391c;
+    --prime-btn-text: #ffffff;
+    --prime-btn-text2: #ffffff;
+    --prime-btn-border: #136053;
+    --prime-btn-border2: #44391c;
+
+    --second-btn: #a7410a;
+    --second-btn2: #692805;
+    --second-btn-text: #ffffff;
+    --second-btn-text2: #ffffff;
+    --second-btn-border: #a7410a;
+    --second-btn-border2: #692805;
+
+    --prime-border: #136053;
+    --light-border: #ebb598;
+    --main-border: #a7410a;
+}
+
+
+
+.body-bg {
+    background-color: var(--body-bg) !important;
+}
+.head-top-bg {
+    background: var(--head-top-bg) !important;
+}
+.head-bg {
+    background: var(--head-bg) !important;
+}
+.banner-bg {
+    background: var(--banner-bg) !important;
+}
+.prime-bg {
+    background-color: var(--prime-bg) !important;
+}
+.prime-alt-bg {
+    background-color: var(--prime-alt-bg) !important;
+}
+.nav-bg {
+    background-color: var(--nav-bg) !important;
+}
+.alt-bg {
+    background-color: var(--alt-bg) !important;
+}
+.alt-bg2 {
+    background-color: var(--alt-bg2) !important;
+}
+.card-bg {
+    background-color: var(--card-bg) !important;
+}
+.card-alt-bg {
+    background-color: var(--card-alt-bg) !important;
+}
+.dark-bg {
+    background-color: var(--dark-bg) !important;
+}
+.card-alt-bg {
+    background-color: var(--card-alt-bg) !important;
+}
+.body-alt-bg {
+    background-color: var(--body-alt-bg) !important;
+}
+.input-bg {
+    background-color: var(--input-bg) !important;
+}
+.form-bg {
+    background-color: var(--form-bg) !important;
+}
+.custom-bg {
+    background-color: var(--custom-bg) !important;
+}
+.icon-bg {
+    background-color: var(--icon-bg) !important;
+}
+.footer-bg {
+    background-color: var(--footer-bg) !important;
+}
+.footer-copy-bg {
+    background-color: var(--footer-copy-bg) !important;
+}
+.white-bg {
+    background-color: var(--white-bg) !important;
+}
+
+
+.nav-text {
+    color: var(--nav-text) !important;
+}
+.icon-text {
+    color: var(--icon-text) !important;
+}
+.white-text {
+    color: var(--white-text) !important;
+}
+.prime-text {
+    color: var(--prime-text) !important;
+}
+.prime-alt-text {
+    color: var(--prime-alt-text) !important;
+}
+.head-text {
+    color: var(--head-text) !important;
+}
+.para-text {
+    color: var(--para-text) !important;
+}
+.dark-text {
+    color: var(--dark-text) !important;
+}
+.head-alt-text {
+    color: var(--head-alt-text) !important;
+}
+.para-alt-text {
+    color: var(--para-alt-text) !important;
+}
+.input-text {
+    color: var(--input-text) !important;
+}
+.footer-text {
+    color: var(--footer-text) !important;
+}
+.footer-copy-text {
+    color: var(--footer-copy-text) !important;
+}
+.list-text {
+    color: var(--list-text) !important;
+}
+
+.prime-btn {
+    background-color: var(--prime-btn) !important;
+    color: var(--prime-btn-text) !important;
+    text-transform: capitalize !important;
+    padding: 12px 24px;
+    border-radius: 50px;
+}
+
+.prime-btn:hover {
+    background-color: var(--prime-btn2) !important;
+    color: var(--prime-btn-text2) !important;
+    padding: 12px 24px;
+    border-radius: 50px;
+}
+
+.prime-outline-btn {
+    background-color: transparent !important;
+    color: var(--prime-btn-text) !important;
+    border: 1px solid var(--prime-btn-border2) !important;
+    text-transform: capitalize !important;
+    padding: 12px 24px;
+    border-radius: 50px;
+}
+.prime-outline-btn:hover {
+    background: var(--prime-btn) !important;
+    color: var(--prime-btn-text2) !important;
+    border: 1px solid var(--prime-btn-border) !important;
+    padding: 12px 24px;
+    border-radius: 50px;
+}
+
+.second-btn {
+    background-color: var(--second-btn) !important;
+    color: var(--second-btn-text) !important;
+    text-transform: capitalize !important;
+    padding: 12px 24px;
+    border-radius: 50px;
+}
+
+.second-btn:hover {
+    background-color: var(--second-btn2) !important;
+    color: var(--second-btn-text2) !important;
+    padding: 12px 24px;
+    border-radius: 50px;
+}
+
+.second-outline-btn {
+    background-color: transparent !important;
+    color: var(--second-btn-text) !important;
+    border: 1px solid var(--second-btn-border2) !important;
+    text-transform: capitalize !important;
+    padding: 12px 24px;
+    border-radius: 50px;
+}
+.second-outline-btn:hover {
+    background: var(--second-btn) !important;
+    color: var(--second-btn-text2) !important;
+    border: 1px solid var(--second-btn-border) !important;
+    padding: 12px 24px;
+    border-radius: 50px;
+}
+
+
+.prime-border {
+    border-color: var(--prime-border) !important;
+} 
+.light-border {
+    border-color: var(--light-border) !important;
+}
+.main-border {
+    border-color: var(--main-border) !important;
+}
+
+.primefont {
+    font-family: var(--primefont) !important;
+}
+.secondfont {
+    font-family: var(--secondfont) !important;
+}
+.tertiaryfont {
+    font-family: var(--tertiaryfont) !important;
+}   
+
+/* font size */
+.fs-7{
+    font-size: 14px;
+}
+.fs-18{
+    font-size: 18px;
+}
+.fs-30{
+    font-size: 30px;
+}
+.fs-52{
+    font-size: 52px;
+}
+.fs-lg{
+    font-size: calc(2rem + 1.6vw);
+}
+
+/* margin */
+
+
+.mt-100{
+    margin-top: 100px;
+}
+
+/* padding */
+.p-12{
+    padding: 0px 120px;
+}
+.p-11{
+    padding: 15px 0px;
+}
