@@ -1,0 +1,32 @@
+# ZPLUS Water Softener Website
+
+This file contains information about the ZPLUS Water Softener website project.
+
+## Project Overview
+This is a static website for ZPLUS Water Softener, a product that treats hard water. The website showcases the product's benefits, installation process, and features.
+
+## Content Source
+The content for the website is derived from `misc/ZPLUS TEXT.txt`.
+Images are located in the `misc/` folder.
+
+## Menu Structure
+- **Home**: Introduction and Hero section.
+- **Product**: Explanation of how the product works and its benefits.
+- **About**: Features, benefits, and comparison.
+- **Contact**: Contact form for inquiries.
+
+## Key Features Highlighted
+- **RO Filter Protection**: Increases life of RO filters.
+- **Washing Machine Protection**: Prevents scaling and improves washing quality.
+- **Geyser Protection**: Extends geyser life.
+- **Cooler & AC Protection**: Prevents scaling in cooling appliances.
+- **Car Wash**: Prevents white spots and dullness.
+- **Skin & Hair Care**: Protects against hard water effects on skin and hair.
+- **Plantation**: Promotes better plant growth.
+- **Easy Installation**: 5-minute installation process.
+- **Zero Maintenance**: No electricity or servicing required.
+
+## Technical Details
+- **Template**: Based on "Swift - Product Landing Page HTML Template".
+- **Framework**: Bootstrap.
+- **Assets**: CSS, JS, and Fonts are in the `assets/` directory.
