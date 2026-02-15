@@ -13,6 +13,7 @@ Images are located in the `misc/` folder.
 - **Home**: Introduction and Hero section.
 - **Product**: Explanation of how the product works and its benefits.
 - **About**: Features, benefits, and comparison.
+- **Installation**: Step-by-step installation guide.
 - **Contact**: Contact form for inquiries.
 
 ## Key Features Highlighted
@@ -25,6 +26,12 @@ Images are located in the `misc/` folder.
 - **Plantation**: Promotes better plant growth.
 - **Easy Installation**: 5-minute installation process.
 - **Zero Maintenance**: No electricity or servicing required.
+
+## Additional Sections
+- **Top Banner**: Displays customer care number and social media links.
+- **Water Quality Check**: Instructions on how to verify the product's effectiveness.
+- **Comparison Chart**: Table comparing ZPLUS with other water softeners.
+- **Testimonials**: Client reviews.
 
 ## Technical Details
 - **Template**: Based on "Swift - Product Landing Page HTML Template".
