@@ -145,36 +145,6 @@
         body {
             padding-top: 40px;
         }
-
-        .whatsapp-float {
-            position: fixed;
-            width: 40px;
-            height: 40px;
-            bottom: 100px;
-            right: 25px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .whatsapp-float:hover {
-            background-color: #128C7E;
-            color: #FFF;
-            transform: scale(1.1);
-        }
-
-        .whatsapp-icon {
-            margin-top: 0px;
-        }
     </style>
 </head>
 
@@ -832,8 +802,15 @@
 <a href="#" class="back-to-top back-to-top-pulse"><i class="fa fa-caret-up"></i></a>
 
 <!-- WhatsApp Icon -->
-<a href="https://wa.me/918700463385" class="whatsapp-float" target="_blank">
-    <i class="fa fa-whatsapp whatsapp-icon"></i>
+<a href="https://wa.me/918700463385?text=Hello%20I%20want%20to%20know%20more%20about%20your%20service"
+   target="_blank"
+   style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:12px 18px; border-radius:30px; font-size:16px; font-family:Arial,sans-serif; font-weight:600; text-decoration:none; display:flex; align-items:center; gap:10px; box-shadow:0px 4px 12px rgba(0,0,0,0.3); z-index:9999; transition:0.3s;">
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp"
+         style="width:28px; height:28px;">
+
+    Chat on WhatsApp
 </a>
 
 <!--Jquery js-->
