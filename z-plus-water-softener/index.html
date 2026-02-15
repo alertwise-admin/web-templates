@@ -6,7 +6,8 @@
     <title>ZPLUS - Water Softener</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="keywords" content="water softener, hard water solution, ZPLUS, water treatment">
-    <meta name="description" content="ZPLUS Water Softener - Protect your home and appliances from hard water problems.">
+    <meta name="description"
+          content="ZPLUS Water Softener - Protect your home and appliances from hard water problems.">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap" rel="stylesheet">
     <!-- Site Main Style sheet css -->
@@ -17,450 +18,704 @@
             background: #fff;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
             height: 100%;
             transition: transform 0.3s ease;
         }
+
         .benefit-card:hover {
             transform: translateY(-5px);
         }
+
         .benefit-icon {
             font-size: 40px;
             color: #007bff;
             margin-bottom: 15px;
         }
+
         .benefit-title {
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 10px;
         }
+
         .benefit-desc {
             font-size: 14px;
             color: #666;
         }
+
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 30px;
             background: #fff;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+
         .comparison-table th, .comparison-table td {
             padding: 15px;
             text-align: left;
             border-bottom: 1px solid #eee;
         }
+
         .comparison-table th {
             background-color: #007bff;
             color: white;
         }
+
         .comparison-table tr:hover {
             background-color: #f9f9f9;
         }
+
         .feature-list li {
             margin-bottom: 10px;
         }
+
         .feature-list i {
             color: #007bff;
             margin-right: 10px;
+        }
+
+        .step-number {
+            background: #007bff;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Loadnig Page Start -->
-    <div class="loader-wrapper">
-        <div class="text-center middle">
-            <div class="lds-ellipsis">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+<!-- Loadnig Page Start -->
+<div class="loader-wrapper">
+    <div class="text-center middle">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
-    <!-- Loadnig Page End -->
+</div>
+<!-- Loadnig Page End -->
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll" href="index.html">ZPLUS</a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
-                <ul class="navbar-nav">
-                    <li class="nav-item"> <a class="nav-link js-scroll active" href="#home"><span data-hover="Home">Home</span></a></li>
-                    <li class="nav-item"> <a class="nav-link js-scroll" href="#product"><span data-hover="Product">Product</span></a></li>
-                    <li class="nav-item"> <a class="nav-link js-scroll" href="#about"><span data-hover="About">About</span></a></li>
-                    <li class="nav-item"> <a class="nav-link js-scroll" href="#contact"><span data-hover="Contact">Contact</span></a></li>
-                </ul>
-            </div>
+<!-- Navbar Start -->
+<nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll" href="index.html">
+            <img src="misc/logo.jpeg" alt="ZPLUS" style="max-height: 50px;">
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+                aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll active" href="#home"><span
+                        data-hover="Home">Home</span></a></li>
+                <li class="nav-item"><a class="nav-link js-scroll" href="#product"><span
+                        data-hover="Product">Product</span></a></li>
+                <li class="nav-item"><a class="nav-link js-scroll" href="#about"><span
+                        data-hover="About">About</span></a></li>
+                <li class="nav-item"><a class="nav-link js-scroll" href="#installation"><span data-hover="Installation">Installation</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link js-scroll" href="#contact"><span
+                        data-hover="Contact">Contact</span></a></li>
+            </ul>
         </div>
-    </nav>
-    <!-- Navbar End -->
+    </div>
+</nav>
+<!-- Navbar End -->
 
-    <!-- Home Section Start -->
-    <header id="home" class="home-area hero-equal-height section-padding overflow-hidden d-flex align-items-center">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-7 col-lg-6">
-                    <div class="text-left home-content z-index position-relative">
-                        <h1>ZPLUS Water Softener</h1>
-                        <p>Protect your home, appliances, skin, and hair from hard water problems. Easy installation, zero maintenance, and life guarantee.</p>
+<!-- Home Section Start -->
+<header id="home" class="home-area hero-equal-height section-padding overflow-hidden d-flex align-items-center">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-7 col-lg-6">
+                <div class="text-left home-content z-index position-relative">
+                    <h1>ZPLUS Water Softener</h1>
+                    <p>Protect your home, appliances, skin, and hair from hard water problems. Easy installation, zero
+                        maintenance, and life guarantee.</p>
 
-                        <a href="#contact" class="button js-scroll" data-text="Contact Us"><span>Contact Us</span></a>
-                    </div>
+                    <a href="#contact" class="button js-scroll" data-text="Contact Us"><span>Contact Us</span></a>
                 </div>
-                <div class="col-12 col-md-5 col-lg-6">
-                    <div class="text-center z-index position-relative home-image animation-bounce">
-                        <img src="misc/Product Image2.jpeg" class="img-fluid" alt="ZPLUS Water Softener">
-                    </div>
-                </div>
             </div>
-        </div>
-        <div class="svg-shape-bottom">
-            <img src="assets/img/hero-shape-bottom.png" class="bottom-shape img-fluid" alt="">
-        </div>
-    </header>
-    <!-- Home Section End -->
-
-    <!-- Why-Choose-us Section Start -->
-    <div class="choose-area text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 owl-carousel owl-theme">
-                    <div class="choose-item">
-                        <div class="choose-icon"><i class="pe-7s-drop"></i> </div>
-                        <div class="choose-info">
-                            <h3>Protect RO Filters</h3>
-                            <p>Increases RO & Filter life, giving it extra security and decreasing servicing time.</p>
-                        </div>
-                    </div>
-                    <div class="choose-item">
-                        <div class="choose-icon"><i class="pe-7s-tools"></i> </div>
-                        <div class="choose-info">
-                            <h3>Zero Maintenance</h3>
-                            <p>Totally non-electrical product. No electricity or servicing required. Just wash with normal water every 2-3 months.</p>
-                        </div>
-                    </div>
-                    <div class="choose-item">
-                        <div class="choose-icon"><i class="pe-7s-smile"></i> </div>
-                        <div class="choose-info">
-                            <h3>Skin & Hair Care</h3>
-                            <p>Protects against skin diseases, hair fall, and allergic skin caused by hard water.</p>
-                        </div>
-                    </div>
-                    <div class="choose-item">
-                        <div class="choose-icon"><i class="pe-7s-gleam"></i> </div>
-                        <div class="choose-info">
-                            <h3>Protect Appliances</h3>
-                            <p>Extends the life of Washing Machines, Geysers, Coolers, and ACs by preventing scaling.</p>
-                        </div>
-                    </div>
-                    <div class="choose-item">
-                        <div class="choose-icon"><i class="pe-7s-car"></i> </div>
-                        <div class="choose-info">
-                            <h3>Better Car Wash</h3>
-                            <p>Prevents dull looks and white spots on your car. Keeps the premium look intact.</p>
-                        </div>
-                    </div>
+            <div class="col-12 col-md-5 col-lg-6">
+                <div class="text-center z-index position-relative home-image animation-bounce">
+                    <img src="assets/img/hero-mockup.png" class="img-fluid" alt="ZPLUS Water Softener">
                 </div>
             </div>
         </div>
     </div>
-    <!-- Why-Choose-us Section End -->
+    <div class="svg-shape-bottom">
+        <img src="assets/img/hero-shape-bottom.png" class="bottom-shape img-fluid" alt="">
+    </div>
+</header>
+<!-- Home Section End -->
 
-    <!-- Product Section Start -->
-    <section id="product" class="about-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 section-title text-center">
-                    <h6 class="small-title">Our Solution</h6>
-                    <h2>How ZPLUS Works</h2>
-                </div>
-            </div>
-            <div class="row d-flex align-items-center">
-                <div class="col-lg-6 col-md-12">
-                    <div class="about-info">
-                        <p>ZPLUS Water Softener is installed inside the water storage tank. It contains a food-grade material that reacts with Calcium (Ca) and Magnesium (Mg), changing their conditions to neutral. This prevents them from reacting with air and forming salt or scaling.</p>
-                        <ul class="feature-list">
-                            <li><i class="fa fa-check-circle-o"></i> Breaks down heavy particles in water</li>
-                            <li><i class="fa fa-check-circle-o"></i> Protects Taps, Tiles, RO, Geysers, etc.</li>
-                            <li><i class="fa fa-check-circle-o"></i> Easy 5-minute installation</li>
-                            <li><i class="fa fa-check-circle-o"></i> No electricity required</li>
-                            <li><i class="fa fa-check-circle-o"></i> Portable and easy to move</li>
-                        </ul>
-                        <a href="#contact" class="button js-scroll" data-text="Get Yours Now"><span>Get Yours Now</span></a>
+<!-- Why-Choose-us Section Start -->
+<div class="choose-area text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 owl-carousel owl-theme">
+                <div class="choose-item">
+                    <div class="choose-icon"><i class="pe-7s-drop"></i></div>
+                    <div class="choose-info">
+                        <h3>Protect RO Filters</h3>
+                        <p>Increases RO & Filter life, giving it extra security and decreasing servicing time.</p>
                     </div>
                 </div>
-                 <div class="col-lg-6 col-md-12">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="benefit-card">
-                                <div class="benefit-icon"><i class="pe-7s-science"></i></div>
-                                <div class="benefit-title">Scientific Solution</div>
-                                <div class="benefit-desc">Neutralizes Ca & Mg ions to prevent scaling.</div>
+                <div class="choose-item">
+                    <div class="choose-icon"><i class="pe-7s-tools"></i></div>
+                    <div class="choose-info">
+                        <h3>Zero Maintenance</h3>
+                        <p>Totally non-electrical product. No electricity or servicing required. Just wash with normal
+                            water every 2-3 months.</p>
+                    </div>
+                </div>
+                <div class="choose-item">
+                    <div class="choose-icon"><i class="pe-7s-smile"></i></div>
+                    <div class="choose-info">
+                        <h3>Skin & Hair Care</h3>
+                        <p>Protects against skin diseases, hair fall, and allergic skin caused by hard water.</p>
+                    </div>
+                </div>
+                <div class="choose-item">
+                    <div class="choose-icon"><i class="pe-7s-gleam"></i></div>
+                    <div class="choose-info">
+                        <h3>Protect Appliances</h3>
+                        <p>Extends the life of Washing Machines, Geysers, Coolers, and ACs by preventing scaling.</p>
+                    </div>
+                </div>
+                <div class="choose-item">
+                    <div class="choose-icon"><i class="pe-7s-car"></i></div>
+                    <div class="choose-info">
+                        <h3>Better Car Wash</h3>
+                        <p>Prevents dull looks and white spots on your car. Keeps the premium look intact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Why-Choose-us Section End -->
+
+<!-- Product Section Start -->
+<section id="product" class="about-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 section-title text-center">
+                <h6 class="small-title">Our Solution</h6>
+                <h2>How ZPLUS Works</h2>
+            </div>
+        </div>
+        <div class="row d-flex align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="about-info">
+                    <p>ZPLUS Water Softener is installed inside the water storage tank. It contains a food-grade
+                        material that reacts with Calcium (Ca) and Magnesium (Mg), changing their conditions to neutral.
+                        This prevents them from reacting with air and forming salt or scaling.</p>
+                    <ul class="feature-list">
+                        <li><i class="fa fa-check-circle-o"></i> Breaks down heavy particles in water</li>
+                        <li><i class="fa fa-check-circle-o"></i> Protects Taps, Tiles, RO, Geysers, etc.</li>
+                        <li><i class="fa fa-check-circle-o"></i> Easy 5-minute installation</li>
+                        <li><i class="fa fa-check-circle-o"></i> No electricity required</li>
+                        <li><i class="fa fa-check-circle-o"></i> Portable and easy to move</li>
+                    </ul>
+                    <a href="#contact" class="button js-scroll" data-text="Get Yours Now"><span>Get Yours Now</span></a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="pe-7s-science"></i></div>
+                            <div class="benefit-title">Scientific Solution</div>
+                            <div class="benefit-desc">Neutralizes Ca & Mg ions to prevent scaling.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="pe-7s-clock"></i></div>
+                            <div class="benefit-title">Quick Install</div>
+                            <div class="benefit-desc">Takes only 5 minutes to install in your tank.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="pe-7s-cash"></i></div>
+                            <div class="benefit-title">Cost Effective</div>
+                            <div class="benefit-desc">Saves plumbing costs and electricity bills.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="pe-7s-check"></i></div>
+                            <div class="benefit-title">Quality Check</div>
+                            <div class="benefit-desc">Verify results with a simple boil test.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Product Section End -->
+
+<!-- About Section Start -->
+<section id="about" class="feature-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 section-title">
+                <h6 class="small-title">Why ZPLUS?</h6>
+                <h2>Benefits & Features</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="pe-7s-filter"></i></div>
+                    <div class="benefit-title">RO Filter Protection</div>
+                    <div class="benefit-desc">Increases RO & Filter life, giving it extra security. RO Servicing time
+                        will be decreasing.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="pe-7s-gleam"></i></div>
+                    <div class="benefit-title">Washing Machine</div>
+                    <div class="benefit-desc">Prevents scaling, improves washing quality, and extends machine life.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="pe-7s-plug"></i></div>
+                    <div class="benefit-title">Geysers Protection</div>
+                    <div class="benefit-desc">Prevents scaling in geysers, saving energy and extending life.</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="pe-7s-wind"></i></div>
+                    <div class="benefit-title">Cooler & AC</div>
+                    <div class="benefit-desc">Prevents scaling in cooling pads and pipes, ensuring better cooling.</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="pe-7s-car"></i></div>
+                    <div class="benefit-title">Car Wash</div>
+                    <div class="benefit-desc">Prevents white spots and dullness, maintaining your car's premium look.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="pe-7s-smile"></i></div>
+                    <div class="benefit-title">Skin & Hair</div>
+                    <div class="benefit-desc">Protects against hair fall and skin problems caused by hard water.</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="pe-7s-leaf"></i></div>
+                    <div class="benefit-title">Plantation</div>
+                    <div class="benefit-desc">Promotes better plant growth compared to hard water.</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="pe-7s-tools"></i></div>
+                    <div class="benefit-title">Tap & Pipeline</div>
+                    <div class="benefit-desc">Protects taps and pipelines from scaling and blockage.</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="pe-7s-like"></i></div>
+                    <div class="benefit-title">Life Guarantee</div>
+                    <div class="benefit-desc">Result and life guarantee. Replacement available if not satisfied.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section End -->
+
+<!-- Installation Section -->
+<section id="installation" class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 section-title text-center">
+                <h6 class="small-title">Easy Setup</h6>
+                <h2>Installation Process</h2>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="text-center">
+                    <i class="pe-7s-tools" style="font-size: 100px; color: #007bff;"></i>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-info">
+                    <p>ZPLUS Water Softener is designed for a hassle-free, 5-minute installation.</p>
+                    <ul class="feature-list">
+                        <li><span class="step-number">1</span> <strong>Location:</strong> Install inside your water
+                            storage tank.
+                        </li>
+                        <li><span class="step-number">2</span> <strong>Position:</strong> Hang it vertically using a
+                            rope.
+                        </li>
+                        <li><span class="step-number">3</span> <strong>Height:</strong> Keep it 1-2 inches above the
+                            bottom of the tank.
+                        </li>
+                        <li><span class="step-number">4</span> <strong>Flexibility:</strong> Portable and easy to remove
+                            if not in use for long periods.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Water Quality Test Section -->
+<section id="quality-check" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 section-title text-center">
+                <h6 class="small-title">Verify Results</h6>
+                <h2>Water Quality Check</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <p>You can verify the effectiveness of ZPLUS Water Softener in just 5 minutes with a simple boil
+                    test.</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4 mb-3">
+                <div class="benefit-card text-center">
+                    <div class="benefit-icon"><i class="pe-7s-science"></i></div>
+                    <h4>Step 1: Collect</h4>
+                    <p>Take equal volumes of raw water and ZPLUS treated water in separate utensils.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="benefit-card text-center">
+                    <div class="benefit-icon"><i class="pe-7s-gleam"></i></div>
+                    <h4>Step 2: Boil</h4>
+                    <p>Boil both samples for the same amount of time and let them cool down.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="benefit-card text-center">
+                    <div class="benefit-icon"><i class="pe-7s-check"></i></div>
+                    <h4>Step 3: Observe</h4>
+                    <p>Raw water will appear turbid with salt layers. ZPLUS water will remain crystal clear.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Comparison Chart Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 section-title">
+                <h6 class="small-title">Comparison</h6>
+                <h2>ZPLUS vs Others</h2>
+            </div>
+            <div class="col-md-12">
+                <table class="comparison-table">
+                    <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>ZPLUS Water Softener</th>
+                        <th>Other Water Softeners</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Cost</td>
+                        <td>Affordable</td>
+                        <td>High Cost</td>
+                    </tr>
+                    <tr>
+                        <td>Maintenance</td>
+                        <td>Zero Maintenance</td>
+                        <td>Weekly Maintenance Required</td>
+                    </tr>
+                    <tr>
+                        <td>Electricity</td>
+                        <td>No Electricity Required</td>
+                        <td>Electricity Required</td>
+                    </tr>
+                    <tr>
+                        <td>Installation</td>
+                        <td>Easy 5-min Installation</td>
+                        <td>Complex Installation</td>
+                    </tr>
+                    <tr>
+                        <td>Portability</td>
+                        <td>Portable</td>
+                        <td>Fixed</td>
+                    </tr>
+                    <tr>
+                        <td>Chemicals</td>
+                        <td>No Chemicals</td>
+                        <td>Chemical Refilling Required</td>
+                    </tr>
+                    <tr>
+                        <td>Guarantee</td>
+                        <td>Life Guarantee</td>
+                        <td>Limited Warranty</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Testimonials Section Start -->
+<section id="review" class="testimonial-area position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 section-title text-center">
+                <h6 class="small-title">Testimonials</h6>
+                <h2>Our Happy Clients!</h2>
+            </div>
+            <div class="col-md-12">
+                <div class="testimonial-slide">
+                    <div class="owl-carousel owl-theme">
+                        <!-- testimonials item -->
+                        <div class="single-testimonial">
+                            <div class="testimonial-content-inner">
+                                <div class="quote">
+                                    <i class="fa fa-quote-right"></i>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <ul>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star-o"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="testimonial-text">
+                                    <h4>Excellent quality product</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud.</p>
+                                </div>
+                                <div class="author-info">
+                                    <h3>Saabir al-Obeid</h3>
+                                    <span>busniess man</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="benefit-card">
-                                <div class="benefit-icon"><i class="pe-7s-clock"></i></div>
-                                <div class="benefit-title">Quick Install</div>
-                                <div class="benefit-desc">Takes only 5 minutes to install in your tank.</div>
+                        <!-- testimonials item -->
+                        <div class="single-testimonial">
+                            <div class="testimonial-content-inner">
+                                <div class="quote">
+                                    <i class="fa fa-quote-right"></i>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <ul>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star-o"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="testimonial-text">
+                                    <h4>Excellent quality product</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud.</p>
+                                </div>
+                                <div class="author-info">
+                                    <h3>Ruben Houston</h3>
+                                    <span>busniess man</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="benefit-card">
-                                <div class="benefit-icon"><i class="pe-7s-cash"></i></div>
-                                <div class="benefit-title">Cost Effective</div>
-                                <div class="benefit-desc">Saves plumbing costs and electricity bills.</div>
+                        <!-- testimonials item -->
+                        <div class="single-testimonial">
+                            <div class="testimonial-content-inner">
+                                <div class="quote">
+                                    <i class="fa fa-quote-right"></i>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <ul>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star-o"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="testimonial-text">
+                                    <h4>Excellent quality product</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud.</p>
+                                </div>
+                                <div class="author-info">
+                                    <h3>Rose Hopkins</h3>
+                                    <span>busniess man</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="benefit-card">
-                                <div class="benefit-icon"><i class="pe-7s-check"></i></div>
-                                <div class="benefit-title">Quality Check</div>
-                                <div class="benefit-desc">Verify results with a simple boil test.</div>
+                        <!-- testimonials item -->
+                        <div class="single-testimonial">
+                            <div class="testimonial-content-inner">
+                                <div class="quote">
+                                    <i class="fa fa-quote-right"></i>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <ul>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star-o"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="testimonial-text">
+                                    <h4>Excellent quality product</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud.</p>
+                                </div>
+                                <div class="author-info">
+                                    <h3>Monica Frazier</h3>
+                                    <span>busniess man</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Product Section End -->
+    </div>
+</section>
+<!-- Testimonials Section End -->
 
-    <!-- About Section Start -->
-    <section id="about" class="feature-area section-padding">
+<!-- Contact Section Start -->
+<section id="contact" class="contact-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 section-title">
+                <h6 class="small-title">Get In Touch</h6>
+                <h2>Contact Us</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <p class="form-message"></p>
+                <br>
+                <form class="contact-form form" id="contact-form" action="#" method="POST">
+                    <div class="controls">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12">
+                                <div class="form-group has-error has-danger">
+                                    <input id="form_name" type="text" name="name" placeholder="Your Name"
+                                           required="required"></div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="form-group has-error has-danger">
+                                    <input id="form_email" type="email" name="email" placeholder="Your Email"
+                                           required="required"></div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="form-group has-error has-danger">
+                                    <input id="form_subject" type="text" name="subject" placeholder="Your Subject"
+                                           required="required"></div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea id="form_message" name="message" placeholder="Your Message" rows="4"
+                                              required="required"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="button" data-text="Send Message"><span>Send Message</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section End -->
+
+<!-- Footer-top Section Start -->
+<footer class="footer-area">
+    <svg class="footer-curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1442 125">
+        <path fill="#fff"
+              d="M1442 9c-152.5 0-158.66 78.4-514.29 26.08C659 5 489 124.09 333.63 124.09 212 124.09 184.23 49 0 49V0h1442z"></path>
+    </svg>
+    <div class="footer-top-area">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 section-title">
-                    <h6 class="small-title">Why ZPLUS?</h6>
-                    <h2>Benefits & Features</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="benefit-card">
-                        <div class="benefit-icon"><i class="pe-7s-filter"></i></div>
-                        <div class="benefit-title">RO Filter Protection</div>
-                        <div class="benefit-desc">Increases RO & Filter life, giving it extra security. RO Servicing time will be decreasing.</div>
+                <div class="col-lg-6 offset-lg-3 col-md-12 footer-link footer-subscribe text-center">
+                    <div class="footer-logo-box">
+                        <h2>ZPLUS</h2>
+                        <p>ZPLUS Water Softener gives you freedom, security & surety. Protect your home and health from
+                            hard water.</p>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="benefit-card">
-                        <div class="benefit-icon"><i class="pe-7s-gleam"></i></div>
-                        <div class="benefit-title">Washing Machine</div>
-                        <div class="benefit-desc">Prevents scaling, improves washing quality, and extends machine life.</div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="benefit-card">
-                        <div class="benefit-icon"><i class="pe-7s-plug"></i></div>
-                        <div class="benefit-title">Geysers Protection</div>
-                        <div class="benefit-desc">Prevents scaling in geysers, saving energy and extending life.</div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="benefit-card">
-                        <div class="benefit-icon"><i class="pe-7s-wind"></i></div>
-                        <div class="benefit-title">Cooler & AC</div>
-                        <div class="benefit-desc">Prevents scaling in cooling pads and pipes, ensuring better cooling.</div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="benefit-card">
-                        <div class="benefit-icon"><i class="pe-7s-car"></i></div>
-                        <div class="benefit-title">Car Wash</div>
-                        <div class="benefit-desc">Prevents white spots and dullness, maintaining your car's premium look.</div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="benefit-card">
-                        <div class="benefit-icon"><i class="pe-7s-smile"></i></div>
-                        <div class="benefit-title">Skin & Hair</div>
-                        <div class="benefit-desc">Protects against hair fall and skin problems caused by hard water.</div>
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-md-6">
-                    <div class="benefit-card">
-                        <div class="benefit-icon"><i class="pe-7s-leaf"></i></div>
-                        <div class="benefit-title">Plantation</div>
-                        <div class="benefit-desc">Promotes better plant growth compared to hard water.</div>
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-md-6">
-                    <div class="benefit-card">
-                        <div class="benefit-icon"><i class="pe-7s-tools"></i></div>
-                        <div class="benefit-title">Tap & Pipeline</div>
-                        <div class="benefit-desc">Protects taps and pipelines from scaling and blockage.</div>
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-md-6">
-                    <div class="benefit-card">
-                        <div class="benefit-icon"><i class="pe-7s-like"></i></div>
-                        <div class="benefit-title">Life Guarantee</div>
-                        <div class="benefit-desc">Result and life guarantee. Replacement available if not satisfied.</div>
+
+                    <div class="footer-social-icon">
+                        <a href="#" class="icon"> <i class="fa fa-facebook"></i> </a>
+                        <a href="#" class="icon"> <i class="fa fa-twitter"></i> </a>
+                        <a href="#" class="icon"> <i class="fa fa-instagram"></i> </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- About Section End -->
-
-    <!-- Comparison Chart Section -->
-    <section class="section-padding">
+    </div>
+    <div class="copyright-area text-center">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 section-title">
-                    <h6 class="small-title">Comparison</h6>
-                    <h2>ZPLUS vs Others</h2>
-                </div>
                 <div class="col-md-12">
-                     <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>ZPLUS Water Softener</th>
-                                <th>Other Water Softeners</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Cost</td>
-                                <td>Affordable</td>
-                                <td>High Cost</td>
-                            </tr>
-                            <tr>
-                                <td>Maintenance</td>
-                                <td>Zero Maintenance</td>
-                                <td>Weekly Maintenance Required</td>
-                            </tr>
-                            <tr>
-                                <td>Electricity</td>
-                                <td>No Electricity Required</td>
-                                <td>Electricity Required</td>
-                            </tr>
-                            <tr>
-                                <td>Installation</td>
-                                <td>Easy 5-min Installation</td>
-                                <td>Complex Installation</td>
-                            </tr>
-                            <tr>
-                                <td>Portability</td>
-                                <td>Portable</td>
-                                <td>Fixed</td>
-                            </tr>
-                             <tr>
-                                <td>Chemicals</td>
-                                <td>No Chemicals</td>
-                                <td>Chemical Refilling Required</td>
-                            </tr>
-                             <tr>
-                                <td>Guarantee</td>
-                                <td>Life Guarantee</td>
-                                <td>Limited Warranty</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <p>Copyright &copy; 2024 ZPLUS. All Right Reserved.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</footer>
+<!-- Footer Section End -->
 
-    <!-- Contact Section Start -->
-    <section id="contact" class="contact-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 section-title">
-                    <h6 class="small-title">Get In Touch</h6>
-                    <h2>Contact Us</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-10 offset-md-1">
-                    <p class="form-message"></p>
-                    <br>
-                    <form class="contact-form form" id="contact-form" action="#" method="POST">
-                        <div class="controls">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-12">
-                                    <div class="form-group has-error has-danger">
-                                        <input id="form_name" type="text" name="name" placeholder="Your Name" required="required"> </div>
-                                </div>
-                                <div class="col-lg-4 col-md-12">
-                                    <div class="form-group has-error has-danger">
-                                        <input id="form_email" type="email" name="email" placeholder="Your Email" required="required"> </div>
-                                </div>
-                                <div class="col-lg-4 col-md-12">
-                                    <div class="form-group has-error has-danger">
-                                        <input id="form_subject" type="text" name="subject" placeholder="Your Subject" required="required"> </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <textarea id="form_message" name="message" placeholder="Your Message" rows="4" required="required"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <button type="submit" class="button" data-text="Send Message"><span>Send Message</span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contact Section End -->
+<!-- Back to Top -->
+<a href="#" class="back-to-top back-to-top-pulse"><i class="fa fa-caret-up"></i></a>
 
-    <!-- Footer-top Section Start -->
-    <footer class="footer-area">
-        <svg class="footer-curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1442 125">
-            <path fill="#fff" d="M1442 9c-152.5 0-158.66 78.4-514.29 26.08C659 5 489 124.09 333.63 124.09 212 124.09 184.23 49 0 49V0h1442z"></path>
-        </svg>
-        <div class="footer-top-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 offset-lg-3 col-md-12 footer-link footer-subscribe text-center">
-                        <div class="footer-logo-box">
-                            <h2>ZPLUS</h2>
-                            <p>ZPLUS Water Softener gives you freedom, security & surety. Protect your home and health from hard water.</p>
-                        </div>
-
-                        <div class="footer-social-icon">
-                            <a href="#" class="icon"> <i class="fa fa-facebook"></i> </a>
-                            <a href="#" class="icon"> <i class="fa fa-twitter"></i> </a>
-                            <a href="#" class="icon"> <i class="fa fa-instagram"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-area text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>Copyright &copy; 2024 ZPLUS. All Right Reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer Section End -->
-
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top back-to-top-pulse"><i class="fa fa-caret-up"></i></a>
-
-    <!--Jquery js-->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <!--Site Main js-->
-    <script src="assets/js/main.js"></script>
+<!--Jquery js-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<!--Site Main js-->
+<script src="assets/js/main.js"></script>
 
 </body>
 
