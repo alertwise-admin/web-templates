@@ -45,27 +45,57 @@
             color: #666;
         }
 
+        /* Comparison Table Styles */
+        .comparison-table-container {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+            margin-top: 30px;
+        }
+
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 30px;
-            background: #fff;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
         }
 
         .comparison-table th, .comparison-table td {
-            padding: 15px;
-            text-align: left;
+            padding: 15px 20px;
             border-bottom: 1px solid #eee;
+            vertical-align: middle;
         }
 
         .comparison-table th {
-            background-color: #007bff;
-            color: white;
+            background-color: #6c757d;
+            color: #fff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.5px;
         }
 
-        .comparison-table tr:hover {
-            background-color: #f9f9f9;
+        .comparison-table th.highlight-header {
+            background-color: #007bff;
+            font-size: 16px;
+        }
+
+        .comparison-table td.highlight-cell {
+            background-color: rgba(0, 123, 255, 0.05);
+            color: #007bff;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table i {
+            margin-right: 8px;
+        }
+
+        .text-danger {
+            color: #dc3545;
         }
 
         .feature-list li {
@@ -619,57 +649,59 @@
 <section class="section-padding">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 section-title">
+            <div class="col-md-12 section-title text-center">
                 <h6 class="small-title">Comparison</h6>
                 <h2>ZPLUS vs Others</h2>
             </div>
-            <div class="col-md-12">
-                <table class="comparison-table">
-                    <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>ZPLUS Water Softener</th>
-                        <th>Other Water Softeners</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Cost</td>
-                        <td>Affordable</td>
-                        <td>High Cost</td>
-                    </tr>
-                    <tr>
-                        <td>Maintenance</td>
-                        <td>Zero Maintenance</td>
-                        <td>Weekly Maintenance Required</td>
-                    </tr>
-                    <tr>
-                        <td>Electricity</td>
-                        <td>No Electricity Required</td>
-                        <td>Electricity Required</td>
-                    </tr>
-                    <tr>
-                        <td>Installation</td>
-                        <td>Easy 5-min Installation</td>
-                        <td>Complex Installation</td>
-                    </tr>
-                    <tr>
-                        <td>Portability</td>
-                        <td>Portable</td>
-                        <td>Fixed</td>
-                    </tr>
-                    <tr>
-                        <td>Chemicals</td>
-                        <td>No Chemicals</td>
-                        <td>Chemical Refilling Required</td>
-                    </tr>
-                    <tr>
-                        <td>Guarantee</td>
-                        <td>Life Guarantee</td>
-                        <td>Limited Warranty</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div class="col-md-10 offset-md-1">
+                <div class="comparison-table-container">
+                    <table class="comparison-table">
+                        <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="highlight-header">ZPLUS Water Softener</th>
+                            <th>Other Water Softeners</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Cost</td>
+                            <td class="highlight-cell"><i class="fa fa-check-circle"></i> Affordable</td>
+                            <td><i class="fa fa-times-circle text-danger"></i> High Cost</td>
+                        </tr>
+                        <tr>
+                            <td>Maintenance</td>
+                            <td class="highlight-cell"><i class="fa fa-check-circle"></i> Zero Maintenance</td>
+                            <td><i class="fa fa-times-circle text-danger"></i> Weekly Maintenance</td>
+                        </tr>
+                        <tr>
+                            <td>Electricity</td>
+                            <td class="highlight-cell"><i class="fa fa-check-circle"></i> Not Required</td>
+                            <td><i class="fa fa-times-circle text-danger"></i> Required</td>
+                        </tr>
+                        <tr>
+                            <td>Installation</td>
+                            <td class="highlight-cell"><i class="fa fa-check-circle"></i> Easy (5-min)</td>
+                            <td><i class="fa fa-times-circle text-danger"></i> Complex</td>
+                        </tr>
+                        <tr>
+                            <td>Portability</td>
+                            <td class="highlight-cell"><i class="fa fa-check-circle"></i> Portable</td>
+                            <td><i class="fa fa-times-circle text-danger"></i> Fixed</td>
+                        </tr>
+                        <tr>
+                            <td>Chemicals</td>
+                            <td class="highlight-cell"><i class="fa fa-check-circle"></i> No Chemicals</td>
+                            <td><i class="fa fa-times-circle text-danger"></i> Refilling Required</td>
+                        </tr>
+                        <tr>
+                            <td>Guarantee</td>
+                            <td class="highlight-cell"><i class="fa fa-check-circle"></i> Life Guarantee</td>
+                            <td><i class="fa fa-times-circle text-danger"></i> Limited Warranty</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -714,18 +746,16 @@
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star-o"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
                                     </ul>
                                 </div>
                                 <div class="testimonial-text">
-                                    <h4>Excellent quality product</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud.</p>
+                                    <h4>Great for Hair & Skin</h4>
+                                    <p>I was facing severe hair fall issues due to hard water. After installing ZPLUS, the water quality has improved significantly. My hair feels softer now. Highly recommended!</p>
                                 </div>
                                 <div class="author-info">
-                                    <h3>Saabir al-Obeid</h3>
-                                    <span>busniess man</span>
+                                    <h3>Rajesh Kumar</h3>
+                                    <span>Homeowner</span>
                                 </div>
                             </div>
                         </div>
@@ -741,18 +771,16 @@
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star-o"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
                                     </ul>
                                 </div>
                                 <div class="testimonial-text">
-                                    <h4>Excellent quality product</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud.</p>
+                                    <h4>Solved Scaling Issues</h4>
+                                    <p>The scaling in my bathroom taps and tiles was a nightmare. ZPLUS Water Softener solved it completely. Also, my washing machine works better now.</p>
                                 </div>
                                 <div class="author-info">
-                                    <h3>Ruben Houston</h3>
-                                    <span>busniess man</span>
+                                    <h3>Anita Sharma</h3>
+                                    <span>Housewife</span>
                                 </div>
                             </div>
                         </div>
@@ -768,18 +796,16 @@
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star-o"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
                                     </ul>
                                 </div>
                                 <div class="testimonial-text">
-                                    <h4>Excellent quality product</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud.</p>
+                                    <h4>Zero Maintenance</h4>
+                                    <p>Best investment for my home. No electricity required and zero maintenance as promised. The installation was quick and the team was very professional.</p>
                                 </div>
                                 <div class="author-info">
-                                    <h3>Rose Hopkins</h3>
-                                    <span>busniess man</span>
+                                    <h3>Suresh Patel</h3>
+                                    <span>Business Owner</span>
                                 </div>
                             </div>
                         </div>
@@ -795,18 +821,16 @@
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star-o"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
                                     </ul>
                                 </div>
                                 <div class="testimonial-text">
-                                    <h4>Excellent quality product</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud.</p>
+                                    <h4>Visible Difference</h4>
+                                    <p>I noticed a visible difference in my skin texture. The hard water was making it dry, but ZPLUS changed that. It's a must-have for every household.</p>
                                 </div>
                                 <div class="author-info">
-                                    <h3>Monica Frazier</h3>
-                                    <span>busniess man</span>
+                                    <h3>Dr. Priya Singh</h3>
+                                    <span>Doctor</span>
                                 </div>
                             </div>
                         </div>
@@ -987,5 +1011,4 @@
 </script>
 
 </body>
-
 </html>
