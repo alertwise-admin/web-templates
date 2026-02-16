@@ -1318,6 +1318,73 @@ button, input, textarea:focus {
 	padding: 10px 15px;
 	border-radius: 3px;
 }
+
+/* Contact Info Box Styles */
+.contact-info-box {
+    padding-right: 30px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.contact-info-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-info-item .icon-box {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: rgba(19, 195, 201, 0.1);
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.contact-info-item .icon-box i {
+    font-size: 24px;
+    color: #13c3c9;
+    line-height: 60px;
+}
+
+.contact-info-item .info-content h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-info-item .info-content p {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+}
+
+.contact-info-item .info-content p a {
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.contact-info-item .info-content p a:hover {
+    color: #13c3c9;
+}
+
+@media (max-width: 991px) {
+    .contact-info-box {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+}
+
 /**************************************
  * 14. Footer Section Style
  *************************************/

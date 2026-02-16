@@ -54,10 +54,18 @@
             margin-top: 30px;
         }
 
+        .table-responsive {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
             text-align: left;
+            min-width: 600px; /* Ensure table doesn't get too squished */
         }
 
         .comparison-table th, .comparison-table td {
@@ -280,6 +288,107 @@
     from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* Modal Styles */
+.modal-content {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-bottom: none;
+    padding: 20px 30px;
+}
+
+.modal-title {
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+}
+
+.modal-header .close {
+    color: white;
+    opacity: 0.8;
+    text-shadow: none;
+    font-size: 28px;
+    padding: 20px 30px;
+    margin: -20px -30px -20px auto;
+}
+
+.modal-header .close:hover {
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 30px;
+    background-color: #f8f9fa;
+}
+
+.distributor-info {
+    padding-right: 20px;
+}
+
+.distributor-info h4 {
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.distributor-info p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.distributor-form-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.distributor-form-box .form-control {
+    background-color: #f1f3f4;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 12px 15px;
+    height: auto;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.distributor-form-box .form-control:focus {
+    background-color: white;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+}
+
+.distributor-form-box textarea.form-control {
+    height: 100px;
+}
+
+.distributor-form-box .button {
+    width: 100%;
+    margin-top: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+}
+
+.distributor-form-box .button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+    .distributor-info {
+        margin-bottom: 30px;
+        padding-right: 0;
+    }
+}
     </style>
 </head>
 
@@ -340,6 +449,8 @@
                 <li class="nav-item"><a class="nav-link js-scroll" href="#about"><span
                         data-hover="About">About</span></a></li>
                 <li class="nav-item"><a class="nav-link js-scroll" href="#installation"><span data-hover="Installation">Installation</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#distributorModal"><span data-hover="Distributor">Distributor</span></a>
                 </li>
                 <li class="nav-item"><a class="nav-link js-scroll" href="#contact"><span
                         data-hover="Contact">Contact</span></a></li>
@@ -655,52 +766,54 @@
             </div>
             <div class="col-md-10 offset-md-1">
                 <div class="comparison-table-container">
-                    <table class="comparison-table">
-                        <thead>
-                        <tr>
-                            <th>Feature</th>
-                            <th class="highlight-header">ZPLUS Water Softener</th>
-                            <th>Other Water Softeners</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Cost</td>
-                            <td class="highlight-cell"><i class="fa fa-check-circle"></i> Affordable</td>
-                            <td><i class="fa fa-times-circle text-danger"></i> High Cost</td>
-                        </tr>
-                        <tr>
-                            <td>Maintenance</td>
-                            <td class="highlight-cell"><i class="fa fa-check-circle"></i> Zero Maintenance</td>
-                            <td><i class="fa fa-times-circle text-danger"></i> Weekly Maintenance</td>
-                        </tr>
-                        <tr>
-                            <td>Electricity</td>
-                            <td class="highlight-cell"><i class="fa fa-check-circle"></i> Not Required</td>
-                            <td><i class="fa fa-times-circle text-danger"></i> Required</td>
-                        </tr>
-                        <tr>
-                            <td>Installation</td>
-                            <td class="highlight-cell"><i class="fa fa-check-circle"></i> Easy (5-min)</td>
-                            <td><i class="fa fa-times-circle text-danger"></i> Complex</td>
-                        </tr>
-                        <tr>
-                            <td>Portability</td>
-                            <td class="highlight-cell"><i class="fa fa-check-circle"></i> Portable</td>
-                            <td><i class="fa fa-times-circle text-danger"></i> Fixed</td>
-                        </tr>
-                        <tr>
-                            <td>Chemicals</td>
-                            <td class="highlight-cell"><i class="fa fa-check-circle"></i> No Chemicals</td>
-                            <td><i class="fa fa-times-circle text-danger"></i> Refilling Required</td>
-                        </tr>
-                        <tr>
-                            <td>Guarantee</td>
-                            <td class="highlight-cell"><i class="fa fa-check-circle"></i> Life Guarantee</td>
-                            <td><i class="fa fa-times-circle text-danger"></i> Limited Warranty</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="comparison-table">
+                            <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th class="highlight-header">ZPLUS Water Softener</th>
+                                <th>Other Water Softeners</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Cost</td>
+                                <td class="highlight-cell"><i class="fa fa-check-circle"></i> Affordable</td>
+                                <td><i class="fa fa-times-circle text-danger"></i> High Cost</td>
+                            </tr>
+                            <tr>
+                                <td>Maintenance</td>
+                                <td class="highlight-cell"><i class="fa fa-check-circle"></i> Zero Maintenance</td>
+                                <td><i class="fa fa-times-circle text-danger"></i> Weekly Maintenance</td>
+                            </tr>
+                            <tr>
+                                <td>Electricity</td>
+                                <td class="highlight-cell"><i class="fa fa-check-circle"></i> Not Required</td>
+                                <td><i class="fa fa-times-circle text-danger"></i> Required</td>
+                            </tr>
+                            <tr>
+                                <td>Installation</td>
+                                <td class="highlight-cell"><i class="fa fa-check-circle"></i> Easy (5-min)</td>
+                                <td><i class="fa fa-times-circle text-danger"></i> Complex</td>
+                            </tr>
+                            <tr>
+                                <td>Portability</td>
+                                <td class="highlight-cell"><i class="fa fa-check-circle"></i> Portable</td>
+                                <td><i class="fa fa-times-circle text-danger"></i> Fixed</td>
+                            </tr>
+                            <tr>
+                                <td>Chemicals</td>
+                                <td class="highlight-cell"><i class="fa fa-check-circle"></i> No Chemicals</td>
+                                <td><i class="fa fa-times-circle text-danger"></i> Refilling Required</td>
+                            </tr>
+                            <tr>
+                                <td>Guarantee</td>
+                                <td class="highlight-cell"><i class="fa fa-check-circle"></i> Life Guarantee</td>
+                                <td><i class="fa fa-times-circle text-danger"></i> Limited Warranty</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -852,23 +965,55 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-10 offset-md-1">
+            <div class="col-lg-5 col-md-12">
+                <div class="contact-info-box">
+                    <div class="contact-info-item">
+                        <div class="icon-box">
+                            <i class="pe-7s-map-marker"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Our Location</h4>
+                            <p>C-2/19/1, Rama Vihar, Mohammad Pur Majri, North West Delhi Delhi - 110081</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="icon-box">
+                            <i class="pe-7s-mail"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email Address</h4>
+                            <p><a href="mailto:zpluswatersoftener@gmail.com">zpluswatersoftener@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="icon-box">
+                            <i class="pe-7s-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Phone Number</h4>
+                            <p><a href="tel:+919310304700">+91 9310304700</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12">
                 <p class="form-message"></p>
-                <br>
-                <form class="contact-form form" id="contact-form" action="#" method="POST">
+                <form class="contact-form form" id="contact-form" action="https://formsubmit.co/zpluswatersoftener@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Inquiry from ZPLUS Website">
+                    <input type="hidden" name="_template" value="table">
                     <div class="controls">
                         <div class="row">
-                            <div class="col-lg-4 col-md-12">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="form-group has-error has-danger">
                                     <input id="form_name" type="text" name="name" placeholder="Your Name"
                                            required="required"></div>
                             </div>
-                            <div class="col-lg-4 col-md-12">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="form-group has-error has-danger">
                                     <input id="form_email" type="email" name="email" placeholder="Your Email"
                                            required="required"></div>
                             </div>
-                            <div class="col-lg-4 col-md-12">
+                            <div class="col-md-12">
                                 <div class="form-group has-error has-danger">
                                     <input id="form_subject" type="text" name="subject" placeholder="Your Subject"
                                            required="required"></div>
@@ -931,6 +1076,77 @@
     </div>
 </footer>
 <!-- Footer Section End -->
+
+<!-- Distributor Modal -->
+<div class="modal fade" id="distributorModal" tabindex="-1" role="dialog" aria-labelledby="distributorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="distributorModalLabel">Become a Distributor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="distributor-info">
+                            <h4>Why Partner with ZPLUS?</h4>
+                            <p>Join the ZPLUS family and start your own profitable business. We are looking for distributors across India to help us reach more homes and solve hard water problems.</p>
+                            <ul class="feature-list">
+                                <li><i class="fa fa-check-circle-o"></i> Low Investment, High Returns</li>
+                                <li><i class="fa fa-check-circle-o"></i> Exclusive Territory Rights</li>
+                                <li><i class="fa fa-check-circle-o"></i> Marketing & Sales Support</li>
+                                <li><i class="fa fa-check-circle-o"></i> Training & Technical Assistance</li>
+                                <li><i class="fa fa-check-circle-o"></i> Growing Market Demand</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="distributor-form-box">
+                            <form class="contact-form form" action="https://formsubmit.co/zpluswatersoftener@gmail.com" method="POST">
+                                <input type="hidden" name="_subject" value="New Distributor Application">
+                                <input type="hidden" name="_template" value="table">
+                                <div class="controls">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" name="name" placeholder="Your Name" required="required" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="email" name="email" placeholder="Your Email" required="required" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="tel" name="phone" placeholder="Phone Number" required="required" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" name="city" placeholder="City / Location" required="required" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea name="message" placeholder="Why do you want to become a distributor?" rows="4" class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button type="submit" class="button" data-text="Apply Now"><span>Apply Now</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Back to Top -->
 <a href="#" class="back-to-top back-to-top-pulse"><i class="fa fa-caret-up"></i></a>
