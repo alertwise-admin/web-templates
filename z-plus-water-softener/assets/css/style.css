@@ -582,6 +582,21 @@ dl, ol, ul {
 	transform: translateY(-100%);
 }
 
+/* Logo switching logic */
+.navbar-b.navbar-trans .logo-light {
+    display: none !important;
+}
+.navbar-b.navbar-trans .logo-dark {
+    display: block !important;
+}
+
+.navbar-b.navbar-reduce .logo-light {
+    display: block !important;
+}
+.navbar-b.navbar-reduce .logo-dark {
+    display: none !important;
+}
+
 /**************************************
  * 04.Home Section Style
  *************************************/
