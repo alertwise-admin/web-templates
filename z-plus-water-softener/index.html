@@ -145,6 +145,109 @@
         body {
             padding-top: 40px;
         }
+        /* Container holds everything at the bottom right */
+.wa-widget-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* This keeps the button to the right */
+    font-family: Arial, sans-serif;
+}
+
+/* Popup Window Styles */
+.wa-popup {
+    display: none;
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    margin-bottom: 15px;
+    overflow: hidden;
+    animation: waFadeIn 0.3s ease-out;
+}
+
+.wa-header {
+    background: #234d44;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wa-brand { display: flex; align-items: center; gap: 10px; }
+.wa-avatar { width: 40px; height: 40px; border-radius: 50%; background: #fff; }
+.wa-name { font-weight: bold; }
+.wa-status { font-size: 12px; opacity: 0.8; }
+.wa-close { cursor: pointer; font-size: 24px; line-height: 1; }
+
+.wa-body {
+    background: #e5ddd5; /* Classic WhatsApp pattern background color */
+    padding: 20px;
+    height: 120px;
+}
+
+.wa-bubble {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 0 10px 10px 10px;
+    font-size: 14px;
+    max-width: 80%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.wa-bubble-sender { font-size: 11px; color: #888; font-weight: bold; display: block; }
+
+.wa-footer { padding: 15px; text-align: center; background: #fff; }
+.wa-start-btn {
+    background: #72c054;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.wa-brand-tag { font-size: 10px; color: #aaa; margin-top: 10px; }
+.wa-brand-tag span { color: #72c054; font-weight: bold; }
+
+/* Launcher Button Styles */
+.wa-launcher {
+    background-color: #72c054;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* Default Pill Shape */
+    padding: 0 20px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+/* Circle state triggered by JS */
+.wa-launcher.is-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.wa-launcher img { width: 28px; height: 28px; }
+#waBtnText { margin-left: 10px; font-weight: bold; }
+
+@keyframes waFadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
     </style>
 </head>
 
@@ -382,7 +485,7 @@
             </div>
             <div class="col-lg-4 col-md-6 mb-3">
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="pe-7s-wind"></i></div>
+                    <div class="benefit-icon"><i class="pe-7s-refresh-2"></i></div>
                     <div class="benefit-title">Cooler & AC</div>
                     <div class="benefit-desc">Prevents scaling in cooling pads and pipes, ensuring better cooling.</div>
                 </div>
@@ -804,22 +907,79 @@
 <a href="#" class="back-to-top back-to-top-pulse"><i class="fa fa-caret-up"></i></a>
 
 <!-- WhatsApp Icon -->
-<a href="https://wa.me/918700463385?text=Hello%20I%20want%20to%20know%20more%20about%20your%20service"
-   target="_blank"
-   style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:12px 18px; border-radius:30px; font-size:16px; font-family:Arial,sans-serif; font-weight:600; text-decoration:none; display:flex; align-items:center; gap:10px; box-shadow:0px 4px 12px rgba(0,0,0,0.3); z-index:9999; transition:0.3s;">
+<div class="wa-widget-wrapper">
+    <div class="wa-popup" id="waPopup">
+        <div class="wa-header">
+            <div class="wa-brand">
+                <img src="assets/img/logo.jpeg" class="wa-avatar" alt="Avatar">
+                <div>
+                    <div class="wa-name">Z Plus Water Softener</div>
+                    <div class="wa-status">online</div>
+                </div>
+            </div>
+            <div class="wa-close" onclick="toggleChat()">&times;</div>
+        </div>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-         alt="WhatsApp"
-         style="width:28px; height:28px;">
+        <div class="wa-body">
+            <div class="wa-bubble">
+                <span class="wa-bubble-sender">Z Plus Water Softener</span>
+                Hi,<br>How can I help you ?
+            </div>
+        </div>
 
-    Chat on WhatsApp
-</a>
+        <div class="wa-footer">
+            <button class="wa-start-btn" onclick="openWhatsApp()">Start chat</button>
+            <div class="wa-brand-tag">⚡ by <span><a href="https://alertwise.net" target="_blank">AlertWise</a> </span></div>
+        </div>
+    </div>
+
+    <div class="wa-launcher" id="waButton" onclick="toggleChat()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <span id="waBtnText">Chat with us</span>
+    </div>
+</div>
 
 <!--Jquery js-->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/plugins.js"></script>
 <!--Site Main js-->
 <script src="assets/js/main.js"></script>
+
+<script>
+    /**
+     * Toggles the chat window and changes the button shape
+     */
+    function toggleChat() {
+        const popup = document.getElementById('waPopup');
+        const button = document.getElementById('waButton');
+        const btnText = document.getElementById('waBtnText');
+
+        if (popup.style.display === "none" || popup.style.display === "") {
+            // Show Popup
+            popup.style.display = "block";
+            // Transform button to circle and hide text
+            button.classList.add('is-circle');
+            btnText.style.display = "none";
+        } else {
+            // Hide Popup
+            popup.style.display = "none";
+            // Transform button back to pill and show text
+            button.classList.remove('is-circle');
+            btnText.style.display = "inline";
+        }
+    }
+
+    /**
+     * Redirects user to WhatsApp with a pre-filled message
+     */
+    function openWhatsApp() {
+        const phoneNumber = "1234567890"; // Enter your number with country code
+        const message = "Hi! I would like to chat with you.";
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+        window.open(url, '_blank');
+    }
+</script>
 
 </body>
 
