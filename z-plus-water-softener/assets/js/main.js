@@ -104,6 +104,17 @@
         }
     });
 
+    // Hero Slider
+    $('.hero-slider').owlCarousel({
+        loop:true,
+        mouseDrag:true,
+        autoplay:true,
+        dots: true,
+        autoplayTimeout: 4000,
+        smartSpeed: 1000,
+        items:1
+    });
+
 	//  Product shop owl
 	$('#product-shop-slide').owlCarousel({
 		margin: 0,
