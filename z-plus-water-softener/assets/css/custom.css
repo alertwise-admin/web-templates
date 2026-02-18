@@ -51,7 +51,6 @@
     width: 100%;
     border-collapse: collapse;
     text-align: left;
-    min-width: 600px; /* Ensure table doesn't get too squished */
 }
 
 .comparison-table th, .comparison-table td {
@@ -161,10 +160,31 @@
     .top-banner .contact-info {
         justify-content: center;
     }
+    .table-responsive {
+        overflow-x: visible;
+    }
+    .comparison-table {
+        table-layout: fixed;
+        width: 100%;
+    }
+    .comparison-table td, .comparison-table th {
+        white-space: normal;
+        word-wrap: break-word;
+        padding: 8px 4px;
+        font-size: 12px;
+    }
 }
 
 .navbar-b.fixed-top {
     top: 40px;
+    min-height: 60px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-b.fixed-top .navbar-brand {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 body {

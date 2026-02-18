@@ -26,7 +26,8 @@
      */
     function openWhatsApp() {
         const phoneNumber = "9310304700"; // Enter your number with country code
-        const message = "Hi! I would like to chat with you.";
+        const widget = document.querySelector('.wa-widget-wrapper');
+        const message = widget.dataset.message || "Hi! I would like to chat with you.";
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
         window.open(url, '_blank');
