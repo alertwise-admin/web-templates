@@ -13,417 +13,8 @@
     <!-- Site Main Style sheet css -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
-    <style>
-        .benefit-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            height: 100%;
-            transition: transform 0.3s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .benefit-icon {
-            font-size: 40px;
-            color: #007bff;
-            margin-bottom: 15px;
-        }
-
-        .benefit-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .benefit-desc {
-            font-size: 14px;
-            color: #666;
-        }
-
-        /* Comparison Table Styles */
-        .comparison-table-container {
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            background: #fff;
-            margin-top: 30px;
-        }
-
-        .table-responsive {
-            display: block;
-            width: 100%;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            min-width: 600px; /* Ensure table doesn't get too squished */
-        }
-
-        .comparison-table th, .comparison-table td {
-            padding: 15px 20px;
-            border-bottom: 1px solid #eee;
-            vertical-align: middle;
-        }
-
-        .comparison-table th {
-            background-color: #6c757d;
-            color: #fff;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-        }
-
-        .comparison-table th.highlight-header {
-            background-color: #007bff;
-            font-size: 16px;
-        }
-
-        .comparison-table td.highlight-cell {
-            background-color: rgba(0, 123, 255, 0.05);
-            color: #007bff;
-            font-weight: 600;
-        }
-
-        .comparison-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .comparison-table i {
-            margin-right: 8px;
-        }
-
-        .text-danger {
-            color: #dc3545;
-        }
-
-        .feature-list li {
-            margin-bottom: 10px;
-        }
-
-        .feature-list i {
-            color: #007bff;
-            margin-right: 10px;
-        }
-
-        .step-number {
-            background: #007bff;
-            color: #fff;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: inline-block;
-            text-align: center;
-            line-height: 30px;
-            margin-right: 10px;
-            font-weight: bold;
-        }
-
-        .top-banner {
-            background-color: #007bff;
-            color: white;
-            padding: 8px 0;
-            font-size: 14px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1031;
-        }
-
-        .top-banner a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .top-banner .social-icons {
-            text-align: right;
-        }
-
-        .top-banner .social-icons a {
-            margin-left: 10px;
-            margin-right: 0;
-            font-size: 16px;
-        }
-
-        .top-banner .contact-info {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .top-banner .contact-info i {
-            margin-right: 5px;
-        }
-
-        @media (max-width: 768px) {
-            .top-banner .social-icons {
-                text-align: center;
-                margin-top: 5px;
-            }
-
-            .top-banner .contact-info {
-                justify-content: center;
-            }
-        }
-
-        .navbar-b.fixed-top {
-            top: 40px;
-        }
-
-        body {
-            padding-top: 40px;
-        }
-        /* Container holds everything at the bottom right */
-.wa-widget-wrapper {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* This keeps the button to the right */
-    font-family: Arial, sans-serif;
-}
-
-/* Popup Window Styles */
-.wa-popup {
-    display: none;
-    width: 320px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    margin-bottom: 15px;
-    overflow: hidden;
-    animation: waFadeIn 0.3s ease-out;
-}
-
-.wa-header {
-    background: #234d44;
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.wa-brand { display: flex; align-items: center; gap: 10px; }
-.wa-avatar { width: 40px; height: 40px; border-radius: 50%; background: #fff; }
-.wa-name { font-weight: bold; }
-.wa-status { font-size: 12px; opacity: 0.8; }
-.wa-close { cursor: pointer; font-size: 24px; line-height: 1; }
-
-.wa-body {
-    background: #e5ddd5 url('assets/img/wa-bg.webp'); /* Classic WhatsApp pattern background color */
-    background-size: 200px;
-    background-repeat: repeat;
-    padding: 20px;
-    height: 150px;
-}
-
-.wa-bubble {
-    background: white;
-    padding: 10px 15px;
-    border-radius: 0 10px 10px 10px;
-    font-size: 14px;
-    max-width: 80%;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-}
-
-.wa-bubble-sender { font-size: 11px; color: #888; font-weight: bold; display: block; }
-
-.wa-footer { padding: 15px; text-align: center; background: #fff; }
-.wa-start-btn {
-    background: #72c054;
-    color: white;
-    border: none;
-    width: 100%;
-    padding: 12px;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.wa-brand-tag { font-size: 10px; color: #aaa; margin-top: 10px; }
-.wa-brand-tag span { color: #72c054; font-weight: bold; }
-
-/* Launcher Button Styles */
-.wa-launcher {
-    background-color: #72c054;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    /* Default Pill Shape */
-    padding: 0 20px;
-    height: 50px;
-    border-radius: 50px;
-}
-
-/* Circle state triggered by JS */
-.wa-launcher.is-circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    padding: 0;
-}
-
-.wa-launcher img { width: 28px; height: 28px; }
-#waBtnText { margin-left: 10px; font-weight: bold; }
-
-@keyframes waFadeIn {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Modal Styles */
-.modal-content {
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    overflow: hidden;
-}
-
-.modal-header {
-    background: linear-gradient(135deg, #007bff, #0056b3);
-    color: white;
-    border-bottom: none;
-    padding: 20px 30px;
-}
-
-.modal-title {
-    font-weight: 700;
-    font-size: 24px;
-    color: #fff;
-}
-
-.modal-header .close {
-    color: white;
-    opacity: 0.8;
-    text-shadow: none;
-    font-size: 28px;
-    padding: 20px 30px;
-    margin: -20px -30px -20px auto;
-}
-
-.modal-header .close:hover {
-    opacity: 1;
-}
-
-.modal-body {
-    padding: 30px;
-    background-color: #f8f9fa;
-}
-
-.distributor-info {
-    padding-right: 20px;
-}
-
-.distributor-info h4 {
-    color: #007bff;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.distributor-info p {
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.distributor-form-box {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.distributor-form-box .form-control {
-    background-color: #f1f3f4;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    padding: 12px 15px;
-    height: auto;
-    margin-bottom: 15px;
-    transition: all 0.3s;
-}
-
-.distributor-form-box .form-control:focus {
-    background-color: white;
-    border-color: #007bff;
-    box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
-}
-
-.distributor-form-box textarea.form-control {
-    height: 100px;
-}
-
-.distributor-form-box .button {
-    width: 100%;
-    margin-top: 10px;
-    background: #007bff;
-    color: white;
-    border: none;
-}
-
-.distributor-form-box .button:hover {
-    background: #0056b3;
-    transform: translateY(-2px);
-}
-
-@media (max-width: 991px) {
-    .distributor-info {
-        margin-bottom: 30px;
-        padding-right: 0;
-    }
-}
-
-/* Custom Carousel Styles */
-#product-slider .carousel-control-prev,
-#product-slider .carousel-control-next {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-#product-slider .carousel-control-prev:hover,
-#product-slider .carousel-control-next:hover {
-    opacity: 1;
-}
-
-#product-slider .carousel-control-prev-icon,
-#product-slider .carousel-control-next-icon {
-    width: 10px;
-    height: 10px;
-}
-
-#product-slider .carousel-indicators li {
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid #fff;
-}
-
-#product-slider .carousel-indicators .active {
-    background-color: #fff;
-}
-    </style>
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="assets/css/product.css" rel="stylesheet">
 
     <script src="https://cdn.alertwise.net/6993eae5c7c3dd14a960504b/integrate/alert-wise.js"></script>
     <script type="text/javascript">
@@ -497,16 +88,8 @@
 </nav>
 <!-- Navbar End -->
 
-<!-- Product Hero Section -->
-<section class="page-title-area" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(assets/img/slider/1.png); background-size: cover; background-position: center; padding: 150px 0 100px; text-align: center; color: white;">
-    <div class="container">
-        <h1>ZPLUS Water Softener</h1>
-        <p class="lead">The Ultimate Solution for Hard Water Problems</p>
-    </div>
-</section>
-
 <!-- Product Details Section -->
-<section class="product-details-area section-padding">
+<section class="product-details-area section-padding" style="margin-top: 80px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -544,6 +127,10 @@
                         <span class="badge badge-success p-2">In Stock</span>
                         <span class="badge badge-info p-2">Free Shipping</span>
                     </div>
+                    <div class="product-price mt-3">
+                        <h3 class="mb-0"><span class="text-success">₹2,499</span> <del class="text-muted">₹4,999</del></h3>
+                        <span class="badge badge-warning p-2 mb-3">50% OFF</span>
+                    </div>
                     <p class="lead text-muted">Protect your home and appliances from hard water problems with ZPLUS.</p>
                     
                     <p>ZPLUS Water Softener is a revolutionary product designed to treat hard water problems in your home. It is installed inside your water storage tank and works without electricity or maintenance. It uses a unique food-grade material to neutralize the calcium and magnesium ions in hard water, preventing scaling and salt deposits.</p>
@@ -555,12 +142,10 @@
                         <li><i class="fa fa-check-circle-o"></i> <strong>Easy Installation:</strong> DIY 5-minute setup.</li>
                         <li><i class="fa fa-check-circle-o"></i> <strong>Appliance Protection:</strong> Extends life of RO, Geysers, Washing Machines.</li>
                         <li><i class="fa fa-check-circle-o"></i> <strong>Health Benefits:</strong> Better for skin and hair.</li>
-                        <li><i class="fa fa-check-circle-o"></i> <strong>Life Guarantee:</strong> Long-lasting performance.</li>
                     </ul>
 
-                    <div class="action-buttons mt-5">
-                        <a href="https://wa.me/919310304700" class="button btn-lg"><span>Order Now on WhatsApp</span></a>
-                        <a href="https://wa.me/919310304700" class="button btn-lg" style="background-color: #25D366;"><span><i class="fa fa-whatsapp"></i> WhatsApp Us</span></a>
+                    <div class="action-buttons mt-2">
+                        <a href="https://wa.me/919310304700?text=Hi%2C%20I%20would%20like%20to%20order%20ZPLUS%20Water%20Softener.%0A%0APrice%3A%20%E2%82%B92%2C499%20(50%25%20OFF)%0A%0APlease%20share%20payment%20details." class="button btn-lg" style="background-color: #ffc107; color: #212529; border: none;"><span><i class="fa fa-shopping-cart"></i> Buy Now</span></a>
                     </div>
                 </div>
             </div>
@@ -573,73 +158,198 @@
                         <a class="nav-link active" id="desc-tab" data-toggle="tab" href="#desc" role="tab" aria-controls="desc" aria-selected="true">Full Description</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="specs-tab" data-toggle="tab" href="#specs" role="tab" aria-controls="specs" aria-selected="false">Technical Specifications</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" id="install-tab" data-toggle="tab" href="#install" role="tab" aria-controls="install" aria-selected="false">Installation Guide</a>
                     </li>
                 </ul>
                 <div class="tab-content p-4 border border-top-0 bg-white" id="myTabContent">
                     <div class="tab-pane fade show active" id="desc" role="tabpanel" aria-labelledby="desc-tab">
-                        <h3>How It Works</h3>
-                        <p>ZPLUS Water Softener contains a specialized media that interacts with the hard water minerals (Calcium and Magnesium). Instead of removing them (which requires salt and regeneration), it structures them in a way that they lose their ability to stick to surfaces. This process is known as sequestration or conditioning.</p>
-                        
-                        <h3>Benefits</h3>
-                        <p><strong>For Your Home:</strong> Prevents white scaling on taps, tiles, and bathroom fittings. Keeps your kitchen and bathroom looking new.</p>
-                        <p><strong>For Your Appliances:</strong> Scale buildup is the #1 killer of water-using appliances. ZPLUS prevents this buildup in geysers, washing machines, dishwashers, and RO purifiers, significantly extending their lifespan and efficiency.</p>
-                        <p><strong>For You:</strong> Hard water can cause dry skin and hair fall. By neutralizing the hardness, ZPLUS helps in maintaining the natural moisture of your skin and hair.</p>
-                    </div>
-                    <div class="tab-pane fade" id="specs" role="tabpanel" aria-labelledby="specs-tab">
-                        <table class="table table-bordered table-striped">
-                            <tbody>
-                                <tr>
-                                    <th width="30%">Product Name</th>
-                                    <td>ZPLUS Water Softener</td>
-                                </tr>
-                                <tr>
-                                    <th>Technology</th>
-                                    <td>Non-Electric, Chemical-Free Conditioning</td>
-                                </tr>
-                                <tr>
-                                    <th>Installation Type</th>
-                                    <td>In-Tank (Submersible)</td>
-                                </tr>
-                                <tr>
-                                    <th>Maintenance</th>
-                                    <td>Zero Maintenance (Wash with water every 2-3 months)</td>
-                                </tr>
-                                <tr>
-                                    <th>Electricity Required</th>
-                                    <td>No</td>
-                                </tr>
-                                <tr>
-                                    <th>Salt Required</th>
-                                    <td>No</td>
-                                </tr>
-                                <tr>
-                                    <th>Warranty</th>
-                                    <td>Life Guarantee (Conditions Apply)</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <h3 class="mb-3">The Ultimate Hard Water Solution</h3>
+                        <p>ZPLUS Water Softener is a cutting-edge, non-electric water conditioning system designed to protect your home and family from the damaging effects of hard water. Unlike traditional softeners that require salt, electricity, and frequent maintenance, ZPLUS uses a unique <strong>sequestration technology</strong> to neutralize hard water minerals effectively.</p>
+
+                        <h4 class="mt-4">How It Works</h4>
+                        <p>Hard water contains high levels of Calcium and Magnesium ions, which bond together to form stubborn limescale deposits on surfaces. ZPLUS contains a specialized food-grade media that interacts with these minerals at a molecular level. It modifies their structure so they lose their adhesive properties. As a result, the minerals remain in the water (keeping it healthy to drink) but <strong>cannot stick to your pipes, taps, appliances, or skin</strong>.</p>
+
+                        <h4 class="mt-4">Comprehensive Benefits</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i><strong>Protects RO Purifiers:</strong> Prevents scaling on the membrane, significantly extending the life of your expensive RO filters and reducing service costs.</li>
+                                    <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i><strong>Extends Appliance Life:</strong> Your geysers, washing machines, and dishwashers will run more efficiently and last longer without the insulating layer of scale.</li>
+                                    <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i><strong>Better for Skin & Hair:</strong> Hard water strips natural oils, leading to dry skin and hair fall. ZPLUS treated water feels softer and helps maintain your natural glow.</li>
+                                    <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i><strong>Sparkling Bathroom Fittings:</strong> Say goodbye to stubborn white spots on your expensive taps, tiles, and showerheads.</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i><strong>Zero Maintenance:</strong> Once installed, it requires no attention. No salt refilling, no chemical replacement, and no electricity bills.</li>
+                                    <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i><strong>Eco-Friendly:</strong> Does not waste water (unlike RO) and adds no harmful chemicals to the environment.</li>
+                                    <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i><strong>Improves Plant Growth:</strong> Treated water is better for absorption by plants, promoting healthier growth in your garden.</li>
+                                    <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i><strong>Car Wash:</strong> Prevents water spots on your car's paint after washing, keeping it looking premium.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h4 class="mt-4">Why Choose ZPLUS?</h4>
+                        <p>ZPLUS is the most convenient and cost-effective solution on the market. With a <strong>5-minute DIY installation</strong> and a <strong>Life Guarantee</strong>, it offers peace of mind that no other product can match. Whether you live in an apartment or a bungalow, ZPLUS scales to fit your needs.</p>
                     </div>
                     <div class="tab-pane fade" id="install" role="tabpanel" aria-labelledby="install-tab">
-                        <h4>Installation Steps:</h4>
-                        <ol>
-                            <li>Open your overhead water storage tank.</li>
-                            <li>Take the ZPLUS Water Softener unit.</li>
-                            <li>Tie it with a nylon rope (provided or use your own).</li>
-                            <li>Lower it into the tank until it is about 1-2 inches above the bottom of the tank.</li>
-                            <li>Secure the rope at the top of the tank.</li>
-                            <li>That's it! The system is now installed and working.</li>
-                        </ol>
-                        <p><em>Note: For best results, clean the unit with normal water every 2-3 months to remove any sediment that might have settled on it.</em></p>
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+                                <h3 class="mb-3">Easy 5-Minute Installation</h3>
+                                <p>ZPLUS Water Softener is designed for a hassle-free DIY installation. You don't need a plumber or any special tools. Just follow these simple steps:</p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="installation-steps">
+                                    <div class="d-flex mb-4">
+                                        <div class="step-number flex-shrink-0 mr-3">1</div>
+                                        <div>
+                                            <h5 class="mt-0">Open Water Tank</h5>
+                                            <p>Go to your roof and open the lid of your overhead water storage tank.</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-4">
+                                        <div class="step-number flex-shrink-0 mr-3">2</div>
+                                        <div>
+                                            <h5 class="mt-0">Prepare the Unit</h5>
+                                            <p>Take the ZPLUS Water Softener unit and tie it securely with a nylon rope (usually provided or available at hardware stores).</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-4">
+                                        <div class="step-number flex-shrink-0 mr-3">3</div>
+                                        <div>
+                                            <h5 class="mt-0">Positioning</h5>
+                                            <p>Gently lower the unit into the water tank. Ensure it is suspended about <strong>1-2 inches above the bottom</strong> of the tank. It should not touch the floor of the tank to ensure proper water circulation.</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-4">
+                                        <div class="step-number flex-shrink-0 mr-3">4</div>
+                                        <div>
+                                            <h5 class="mt-0">Secure & Close</h5>
+                                            <p>Tie the other end of the rope securely to the top of the tank or the lid handle. Close the tank lid.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="alert alert-info">
+                                    <h5 class="alert-heading"><i class="fa fa-info-circle"></i> Important Note</h5>
+                                    <p>For optimal performance, we recommend cleaning the unit every <strong>2-3 months</strong>. Simply pull it out, wash it with normal water to remove any sediment or mud that may have settled on the surface, and put it back in.</p>
+                                </div>
+                                <div class="mt-4 installation-help">
+                                    <h5>Need Help?</h5>
+                                    <p>Contact us for installation support or any queries.</p>
+                                    <div class="contact-buttons">
+                                        <a href="tel:+918700463385" class="button btn-call"><i class="fa fa-phone"></i> Call Us</a>
+                                        <a href="https://wa.me/919310304700" class="button btn-whatsapp"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- FAQ Section Start -->
+<section id="faq" class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 section-title text-center">
+                <h6 class="small-title">Common Questions</h6>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div id="accordion">
+                    <!-- FAQ Item 1 -->
+                    <div class="card mb-2 border-0">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Does ZPLUS reduce the TDS of water?
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                No, ZPLUS is a water softener/conditioner, not a RO purifier. It neutralizes the hardness (calcium/magnesium) preventing scaling, but does not remove minerals, so TDS remains the same. This is actually healthy as minerals are retained.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="card mb-2 border-0">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Is the water safe for drinking?
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                Yes, ZPLUS uses food-grade media. It does not add any chemicals. However, if your raw water has high TDS or bacteria, you should still use a RO/UV purifier for drinking. ZPLUS protects the RO.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="card mb-2 border-0">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Does it require electricity or salt?
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                No, it is completely non-electric and requires no salt regeneration. It works 24/7 without any power connection.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="card mb-2 border-0">
+                        <div class="card-header" id="headingFour">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    What is the life of the product?
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body">
+                                ZPLUS is designed for long-lasting performance and comes with a Life Guarantee (conditions apply). It is a durable solution for your hard water problems.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 5 -->
+                    <div class="card mb-2 border-0">
+                        <div class="card-header" id="headingFive">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    How do I maintain it?
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                            <div class="card-body">
+                                Maintenance is very simple. Just take the unit out of the tank every 2-3 months and wash it with normal water to remove any sediment or mud. No other servicing is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FAQ Section End -->
 
 <!-- Footer-top Section Start -->
 <footer class="footer-area">

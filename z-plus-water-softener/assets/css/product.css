@@ -1,0 +1,149 @@
+/* Product Page Specific Styles */
+
+/* Custom Carousel Styles */
+#product-slider .carousel-control-prev,
+#product-slider .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+#product-slider .carousel-control-prev:hover,
+#product-slider .carousel-control-next:hover {
+    opacity: 1;
+}
+
+#product-slider .carousel-control-prev-icon,
+#product-slider .carousel-control-next-icon {
+    width: 10px;
+    height: 10px;
+}
+
+#product-slider .carousel-indicators li {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff;
+}
+
+#product-slider .carousel-indicators .active {
+    background-color: #fff;
+}
+
+/* FAQ Styles */
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    padding: 0;
+}
+
+.card-header .btn-link {
+    width: 100%;
+    text-align: left;
+    color: #333;
+    font-weight: 600;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header .btn-link:hover {
+    color: #007bff;
+    background-color: #f8f9fa;
+}
+
+.card-header .btn-link:focus {
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.card-header .btn-link i {
+    transition: transform 0.3s ease;
+}
+
+.card-header .btn-link[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
+.card-header .btn-link[aria-expanded="true"] {
+    color: #007bff;
+    background-color: #f1f8ff;
+}
+
+/* Force navbar to be visible on white background */
+.navbar-b.navbar-trans {
+    background-color: #fff !important;
+    /* Removed box-shadow to allow transition */
+}
+.navbar-b.navbar-trans .nav-link,
+.navbar-b.navbar-trans .navbar-brand {
+    color: #000 !important;
+}
+.navbar-b.navbar-trans .nav-link:hover {
+    color: #13c3c9 !important;
+}
+/* Fix logo visibility */
+.navbar-b.navbar-trans .logo-light {
+    display: block !important;
+}
+.navbar-b.navbar-trans .logo-dark {
+    display: none !important;
+}
+/* Adjust toggler color */
+.navbar-b.navbar-trans .navbar-toggler span {
+    background-color: #000 !important;
+}
+
+/* Installation Help Box */
+.installation-help {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+
+.installation-help h5 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.installation-help p {
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+.installation-help .contact-buttons .button {
+    margin: 5px;
+    display: inline-block;
+    width: auto;
+}
+
+.installation-help .contact-buttons .btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+.installation-help .contact-buttons .btn-whatsapp:hover {
+    background-color: #128C7E;
+}
+
+.installation-help .contact-buttons .btn-call {
+    background-color: #007bff;
+    color: white;
+}
+.installation-help .contact-buttons .btn-call:hover {
+    background-color: #0056b3;
+}
+
+.installation-help .contact-buttons .btn-video {
+    background-color: #dc3545;
+    color: white;
+}
+.installation-help .contact-buttons .btn-video:hover {
+    background-color: #c82333;
+}
