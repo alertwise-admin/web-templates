@@ -147,3 +147,7 @@
 .installation-help .contact-buttons .btn-video:hover {
     background-color: #c82333;
 }
+
+.buy-now-btn {
+    margin-top: 0 !important;
+}
